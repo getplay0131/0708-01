@@ -1,0 +1,67 @@
+h1 {
+  display: none;
+}
+section {
+  max-width: 1150px;
+  width: 100%;
+  margin: auto;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+section img {
+  transition: 0.5s;
+}
+section:hover img {
+  filter: hue-rotate(70deg) blur(5px);
+  transform: scale(1.1);
+}
+img {
+  display: block;
+  position: absolute;
+  /* overflow: hidden; */
+}
+[alt="여자"] {
+  width: 50%;
+  right: 0;
+  top: 0;
+  /* z-index: 2; */
+  /* position: relative; */
+  /* margin: 0 0 0 auto; */
+  /* overflow: hidden; */
+  animation: toLeft 2s both;
+}
+@keyframes toLeft {
+  from {
+    right: -10%;
+    opacity: 0;
+  }
+  to {
+    /* margin-right: 0;
+     */
+    right: 0;
+    opacity: 1;
+  }
+}
+
+[alt="물결"] {
+  width: 85%;
+  top: -5%;
+  left: 25px;
+  scale: 0.9;
+  /* position: absolute; */
+  /* overflow: hidden; */
+  /* z-index: 1; */
+  animation: toLeft2 2s 0.22s both;
+}
+@keyframes toLeft2 {
+  from {
+    left: -10%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
